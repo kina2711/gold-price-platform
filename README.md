@@ -2,14 +2,14 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=15&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=16&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-04 17:34:00 (ICT) 
+> **Latest Pipeline Run:** 2026-06-04 17:44:36 (ICT) 
 > **Key Metric (SJC):** Buy **153.000.000** VND — Sell **156.000.000** VND
 
 ## 🏗 System Architecture (ELT)
 
-I employ a robust ELT approach coupled with the **Medallion Data Architecture**:
+We employ a robust ELT approach coupled with the **Medallion Data Architecture**:
 
 ```mermaid
 graph LR
@@ -71,6 +71,6 @@ graph LR
 
 ---
 
-_Pipeline triggered at **2026-06-04 17:39 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 15 historical snapshots (2026-06-04 → 2026-06-04)._  
+_Pipeline triggered at **2026-06-04 17:44 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 16 historical snapshots (2026-06-04 → 2026-06-04)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._
