@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: gold_prices_db
+    database: "{{ env_var('GCP_PROJECT_ID', 'gold-price-platform') }}"
+    tables:
+      - name: silver_prices
