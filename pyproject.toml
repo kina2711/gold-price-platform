@@ -5,7 +5,7 @@ description = "Vietnam gold price monitor — scrape, README dashboard, Discord 
 readme = "README.md"
 requires-python = ">=3.12"
 license = { file = "LICENSE" }
-authors = [{ name = "Vmt" }]
+authors = [{ name = "Gold Price Platform" }]
 keywords = ["gold", "vietnam", "price", "monitoring", "scraper"]
 dependencies = [
     "beautifulsoup4>=4.12",
