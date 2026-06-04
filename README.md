@@ -9,7 +9,7 @@ An enterprise-grade Data Engineering & Analytics Engineering pipeline built to a
 
 ## 🏗 System Architecture (ELT)
 
-We employ a robust ELT approach coupled with the **Medallion Data Architecture**:
+I employ a robust ELT approach coupled with the **Medallion Data Architecture**:
 
 ```mermaid
 graph LR

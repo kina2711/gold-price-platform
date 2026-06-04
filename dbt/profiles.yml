@@ -1,5 +1,5 @@
 gold_pipeline:
-  target: dev
+  target: "{{ env_var('DBT_TARGET', 'dev') }}"
   outputs:
     dev:
       type: bigquery
@@ -8,3 +8,9 @@ gold_pipeline:
       dataset: "{{ env_var('BQ_DATASET_NAME', 'gold_prices_db') }}"
       threads: 1
       keyfile: "{{ env_var('GCP_KEY_PATH', 'gcp-key.json') }}"
+    ci:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID', 'gold-price-platform') }}"
+      dataset: "{{ env_var('BQ_DATASET_NAME', 'gold_prices_db') }}"
+      threads: 1
