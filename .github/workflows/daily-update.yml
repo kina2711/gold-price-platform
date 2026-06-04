@@ -1,0 +1,57 @@
+name: daily-update
+
+on:
+  schedule:
+    # 07:00 ICT (UTC+7) — cập nhật giá vàng buổi sáng
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Extract - Scrape Data to Bronze
+        run: uv run pipeline update
+
+      - name: Transform & Load - Render README (Gold)
+        run: uv run pipeline render-readme
+
+      - name: Notify - Send Discord Webhook
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: uv run pipeline notify-discord
+
+      - name: Commit & push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/ README.md; then
+            echo "no changes"
+            exit 0
+          fi
+          today=$(date -u +%Y-%m-%d)
+          git add data/ README.md
+          git commit -m "chore(data): ELT pipeline run ${today} [skip ci]"
+          git push
