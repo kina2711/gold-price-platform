@@ -2,9 +2,9 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/Vmt/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=15&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-04 16:43:34 (ICT) 
+> **Latest Pipeline Run:** 2026-06-04 17:34:00 (ICT) 
 > **Key Metric (SJC):** Buy **153.000.000** VND — Sell **156.000.000** VND
 
 ## 🏗 System Architecture (ELT)
@@ -65,12 +65,12 @@ graph LR
 
 - [x] **Phase 1:** Build local ELT Pipeline using Python & GitHub Actions.
 - [x] **Phase 2:** Implement Medallion Architecture (Bronze/Silver/Gold).
-- [ ] **Phase 3:** Cloud Integration (Google Cloud Storage + BigQuery).
-- [ ] **Phase 4:** Analytics Engineering (Migrate transforms to `dbt`).
-- [ ] **Phase 5:** Orchestration (Migrate from GitHub Actions to Apache Airflow or Prefect).
+- [x] **Phase 3:** Cloud Integration (Google Cloud Storage + BigQuery).
+- [x] **Phase 4:** Analytics Engineering (Migrate transforms to `dbt`).
+- [x] **Phase 5:** Orchestration (Migrate from GitHub Actions to Apache Airflow or Prefect).
 
 ---
 
-_Pipeline triggered at **2026-06-04 16:43 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 8 historical snapshots (2026-06-04 → 2026-06-04)._  
+_Pipeline triggered at **2026-06-04 17:39 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 15 historical snapshots (2026-06-04 → 2026-06-04)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._

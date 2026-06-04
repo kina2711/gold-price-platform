@@ -52,6 +52,9 @@ def load_to_bigquery(quotes: list[GoldQuote], snapshot_time: datetime) -> None:
         for q in quotes:
             row = asdict(q)
             row["snapshot_time"] = snapshot_time.isoformat()
+            # Map keys to match BQ schema
+            row["buy_price"] = row.pop("buy")
+            row["sell_price"] = row.pop("sell")
             rows_to_insert.append(row)
         
         # Define schema and partitioning
@@ -59,9 +62,6 @@ def load_to_bigquery(quotes: list[GoldQuote], snapshot_time: datetime) -> None:
             bigquery.SchemaField("brand", "STRING", mode="REQUIRED"),
             bigquery.SchemaField("buy_price", "INTEGER", mode="REQUIRED"),
             bigquery.SchemaField("sell_price", "INTEGER", mode="REQUIRED"),
-            bigquery.SchemaField("type", "STRING", mode="REQUIRED"),
-            bigquery.SchemaField("update_time", "STRING", mode="REQUIRED"),
-            bigquery.SchemaField("url", "STRING", mode="REQUIRED"),
             bigquery.SchemaField("snapshot_time", "TIMESTAMP", mode="REQUIRED"),
         ]
         table = bigquery.Table(table_id, schema=schema)
@@ -73,8 +73,8 @@ def load_to_bigquery(quotes: list[GoldQuote], snapshot_time: datetime) -> None:
         # Create table if not exists
         try:
             client.create_table(table, exists_ok=True)
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"Warning: Table creation might have failed or already exists: {e}")
 
         errors = client.insert_rows_json(table_id, rows_to_insert)
         if errors:

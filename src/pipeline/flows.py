@@ -18,9 +18,11 @@ def extract_and_load_task():
 
 @task
 def run_dbt_models_task():
-    # Run dbt using subprocess since it's a CLI tool
-    # Need to run `dbt deps` first if packages exist, but we have none for now.
-    subprocess.run(["uv", "run", "dbt", "run", "--project-dir", "dbt", "--profiles-dir", "dbt"], check=True)
+    import sys
+    import os
+    # dbt executable is in the same directory as the python executable in the venv
+    dbt_exe = os.path.join(os.path.dirname(sys.executable), "dbt")
+    subprocess.run([dbt_exe, "run", "--project-dir", "dbt", "--profiles-dir", "dbt"], check=True)
 
 @task
 def render_readme_task():

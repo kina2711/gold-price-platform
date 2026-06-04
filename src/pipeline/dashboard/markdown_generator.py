@@ -164,9 +164,9 @@ def _section_roadmap() -> str:
 
 - [x] **Phase 1:** Build local ELT Pipeline using Python & GitHub Actions.
 - [x] **Phase 2:** Implement Medallion Architecture (Bronze/Silver/Gold).
-- [ ] **Phase 3:** Cloud Integration (Google Cloud Storage + BigQuery).
-- [ ] **Phase 4:** Analytics Engineering (Migrate transforms to `dbt`).
-- [ ] **Phase 5:** Orchestration (Migrate from GitHub Actions to Apache Airflow or Prefect)."""
+- [x] **Phase 3:** Cloud Integration (Google Cloud Storage + BigQuery).
+- [x] **Phase 4:** Analytics Engineering (Migrate transforms to `dbt`).
+- [x] **Phase 5:** Orchestration (Migrate from GitHub Actions to Apache Airflow or Prefect)."""
 
 def _footer(history, repo: str) -> str:
     now = datetime.now(_ICT)
