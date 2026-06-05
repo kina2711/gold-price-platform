@@ -2,9 +2,9 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=17&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=18&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-05 08:14:25 (ICT) 
+> **Latest Pipeline Run:** 2026-06-05 08:36:25 (ICT) 
 > **Key Metric (SJC):** Buy **153.000.000** VND — Sell **156.000.000** VND
 
 ## 🏗 System Architecture (ELT)
@@ -46,7 +46,7 @@ graph LR
 | DOJI SG | 153.000.000 | 156.000.000 | 3.000.000 |
 | PNJ Hà Nội | 153.000.000 | 156.000.000 | 3.000.000 |
 | PNJ TP.HCM | 153.000.000 | 156.000.000 | 3.000.000 |
-| Phú Qúy SJC | 153.000.000 | 156.000.000 | 3.000.000 |
+| Phú Qúy SJC | 152.800.000 | 156.000.000 | 3.200.000 |
 | SJC | 153.000.000 | 156.000.000 | 3.000.000 |
 
 
@@ -77,6 +77,6 @@ graph LR
 
 ---
 
-_Pipeline triggered at **2026-06-05 08:14 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 17 historical snapshots (2026-06-04 → 2026-06-05)._  
+_Pipeline triggered at **2026-06-05 08:36 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 18 historical snapshots (2026-06-04 → 2026-06-05)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._
