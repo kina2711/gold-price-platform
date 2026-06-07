@@ -2,9 +2,9 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=20&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=21&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-06 11:03:39 (ICT) 
+> **Latest Pipeline Run:** 2026-06-07 11:40:22 (ICT) 
 > **Key Metric (SJC):** Buy **146.200.000** VND — Sell **150.200.000** VND
 
 ## 🏗 System Architecture (ELT)
@@ -28,7 +28,7 @@ graph LR
 - **Silver (`data/silver/`)**: Cleaned, deduplicated, and normalized historical tabular data.
 - **Gold (In-Memory/UI)**: Business-level aggregations (trends, spread calculations, day-over-day changes).
 
-## 🎯 Gold Layer: Executive Metrics (2026-06-06)
+## 🎯 Gold Layer: Executive Metrics (2026-06-07)
 
 | Metric | Value (VND/lượng) |
 |---|---|
@@ -52,21 +52,22 @@ graph LR
 
 ## 📅 Historical Trend (10 Days)
 
-**7-Day Sparkline:** Ask `█▅ ` · Bid `█▅ `
+**7-Day Sparkline:** Ask `█▅  ` · Bid `█▅  `
 
 | Date | Ask | Bid | Spread |
 |---|---:|---:|---:|
 | 04/06/2026 | 153.000.000 | 156.000.000 | 3.000.000 |
 | 05/06/2026 | 150.800.000 | 153.800.000 | 3.000.000 |
 | 06/06/2026 | 146.200.000 | 150.200.000 | 4.000.000 |
+| 07/06/2026 | 146.200.000 | 150.200.000 | 4.000.000 |
 
 
 ## 📊 Day-Over-Day (DoD) Volatility
 
 | Indicator | Delta (VND) |
 |---|---|
-| Ask Price | 📉 -4.600.000 (-3.05%) |
-| Bid Price | 📉 -3.600.000 (-2.34%) |
+| Ask Price | ➡️ 0 (0.00%) |
+| Bid Price | ➡️ 0 (0.00%) |
 
 ## 🚀 Data Engineering Roadmap
 
@@ -78,6 +79,6 @@ graph LR
 
 ---
 
-_Pipeline triggered at **2026-06-06 11:03 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 20 historical snapshots (2026-06-04 → 2026-06-06)._  
+_Pipeline triggered at **2026-06-07 11:40 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 21 historical snapshots (2026-06-04 → 2026-06-07)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._
