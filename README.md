@@ -2,10 +2,10 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=29&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=30&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-11 11:41:06 (ICT) 
-> **Key Metric (SJC):** Buy **131.000.000** VND — Sell **136.000.000** VND
+> **Latest Pipeline Run:** 2026-06-12 07:32:09 (ICT) 
+> **Key Metric (SJC):** Buy **133.400.000** VND — Sell **138.400.000** VND
 
 ## 🏗 System Architecture (ELT)
 
@@ -28,31 +28,31 @@ graph LR
 - **Silver (`data/silver/`)**: Cleaned, deduplicated, and normalized historical tabular data.
 - **Gold (In-Memory/UI)**: Business-level aggregations (trends, spread calculations, day-over-day changes).
 
-## 🎯 Gold Layer: Executive Metrics (2026-06-11)
+## 🎯 Gold Layer: Executive Metrics (2026-06-12)
 
 | Metric | Value (VND/lượng) |
 |---|---|
-| Ask (Buy) | **131.000.000** |
-| Bid (Sell) | **136.000.000** |
+| Ask (Buy) | **133.400.000** |
+| Bid (Sell) | **138.400.000** |
 | Spread | 5.000.000 |
 
 ## 🏷 Market Overview by Brand
 
 | Brand | Ask (VND) | Bid (VND) | Spread |
 |---|---:|---:|---:|
-| BTMC SJC | 131.000.000 | 136.000.000 | 5.000.000 |
-| BTMH | 130.500.000 | 136.000.000 | 5.500.000 |
-| DOJI HN | 131.000.000 | 136.000.000 | 5.000.000 |
-| DOJI SG | 131.000.000 | 136.000.000 | 5.000.000 |
-| PNJ Hà Nội | 131.000.000 | 136.000.000 | 5.000.000 |
-| PNJ TP.HCM | 131.000.000 | 136.000.000 | 5.000.000 |
-| Phú Qúy SJC | 131.000.000 | 136.000.000 | 5.000.000 |
-| SJC | 131.000.000 | 136.000.000 | 5.000.000 |
+| BTMC SJC | 133.400.000 | 138.400.000 | 5.000.000 |
+| BTMH | 133.500.000 | 138.500.000 | 5.000.000 |
+| DOJI HN | 133.400.000 | 138.400.000 | 5.000.000 |
+| DOJI SG | 133.400.000 | 138.400.000 | 5.000.000 |
+| PNJ Hà Nội | 133.400.000 | 138.400.000 | 5.000.000 |
+| PNJ TP.HCM | 133.400.000 | 138.400.000 | 5.000.000 |
+| Phú Qúy SJC | 133.400.000 | 138.400.000 | 5.000.000 |
+| SJC | 133.400.000 | 138.400.000 | 5.000.000 |
 
 
 ## 📅 Historical Trend (10 Days)
 
-**7-Day Sparkline:** Ask `█▇▅▅▃▃  ` · Bid `█▇▅▅▃▃  `
+**7-Day Sparkline:** Ask `█▇▅▅▃▃   ` · Bid `█▇▅▅▃▃   `
 
 | Date | Ask | Bid | Spread |
 |---|---:|---:|---:|
@@ -64,14 +64,15 @@ graph LR
 | 09/06/2026 | 138.800.000 | 143.800.000 | 5.000.000 |
 | 10/06/2026 | 133.300.000 | 138.300.000 | 5.000.000 |
 | 11/06/2026 | 131.000.000 | 136.000.000 | 5.000.000 |
+| 12/06/2026 | 133.400.000 | 138.400.000 | 5.000.000 |
 
 
 ## 📊 Day-Over-Day (DoD) Volatility
 
 | Indicator | Delta (VND) |
 |---|---|
-| Ask Price | 📉 -2.300.000 (-1.73%) |
-| Bid Price | 📉 -2.300.000 (-1.66%) |
+| Ask Price | 📈 +2.400.000 (+1.83%) |
+| Bid Price | 📈 +2.400.000 (+1.76%) |
 
 ## 🚀 Data Engineering Roadmap
 
@@ -83,6 +84,6 @@ graph LR
 
 ---
 
-_Pipeline triggered at **2026-06-11 11:41 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 29 historical snapshots (2026-06-04 → 2026-06-11)._  
+_Pipeline triggered at **2026-06-12 07:32 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 30 historical snapshots (2026-06-04 → 2026-06-12)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._
