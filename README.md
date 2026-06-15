@@ -2,10 +2,10 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=34&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=35&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-14 11:49:13 (ICT) 
-> **Key Metric (SJC):** Buy **144.000.000** VND — Sell **147.000.000** VND
+> **Latest Pipeline Run:** 2026-06-15 12:05:22 (ICT) 
+> **Key Metric (SJC):** Buy **148.000.000** VND — Sell **150.500.000** VND
 
 ## 🏗 System Architecture (ELT)
 
@@ -28,35 +28,34 @@ graph LR
 - **Silver (`data/silver/`)**: Cleaned, deduplicated, and normalized historical tabular data.
 - **Gold (In-Memory/UI)**: Business-level aggregations (trends, spread calculations, day-over-day changes).
 
-## 🎯 Gold Layer: Executive Metrics (2026-06-14)
+## 🎯 Gold Layer: Executive Metrics (2026-06-15)
 
 | Metric | Value (VND/lượng) |
 |---|---|
-| Ask (Buy) | **144.000.000** |
-| Bid (Sell) | **147.000.000** |
-| Spread | 3.000.000 |
+| Ask (Buy) | **148.000.000** |
+| Bid (Sell) | **150.500.000** |
+| Spread | 2.500.000 |
 
 ## 🏷 Market Overview by Brand
 
 | Brand | Ask (VND) | Bid (VND) | Spread |
 |---|---:|---:|---:|
-| BTMC SJC | 144.000.000 | 147.000.000 | 3.000.000 |
-| BTMH | 144.000.000 | 147.000.000 | 3.000.000 |
-| DOJI HN | 144.000.000 | 147.000.000 | 3.000.000 |
-| DOJI SG | 144.000.000 | 147.000.000 | 3.000.000 |
-| PNJ Hà Nội | 144.000.000 | 147.000.000 | 3.000.000 |
-| PNJ TP.HCM | 144.000.000 | 147.000.000 | 3.000.000 |
-| Phú Qúy SJC | 144.000.000 | 147.000.000 | 3.000.000 |
-| SJC | 144.000.000 | 147.000.000 | 3.000.000 |
+| BTMC SJC | 148.000.000 | 150.500.000 | 2.500.000 |
+| BTMH | 147.500.000 | 150.500.000 | 3.000.000 |
+| DOJI HN | 148.000.000 | 150.500.000 | 2.500.000 |
+| DOJI SG | 148.000.000 | 150.500.000 | 2.500.000 |
+| PNJ Hà Nội | 147.500.000 | 150.500.000 | 3.000.000 |
+| PNJ TP.HCM | 147.500.000 | 150.500.000 | 3.000.000 |
+| Phú Qúy SJC | 148.000.000 | 150.500.000 | 2.500.000 |
+| SJC | 148.000.000 | 150.500.000 | 2.500.000 |
 
 
 ## 📅 Historical Trend (10 Days)
 
-**7-Day Sparkline:** Ask `█▆▆▃▃  ▅▅▅` · Bid `█▆▆▄▄  ▄▅▅`
+**7-Day Sparkline:** Ask `▇▇▄▄  ▅▆▆█` · Bid `▇▇▄▄▂ ▅▆▆█`
 
 | Date | Ask | Bid | Spread |
 |---|---:|---:|---:|
-| 05/06/2026 | 150.800.000 | 153.800.000 | 3.000.000 |
 | 06/06/2026 | 146.200.000 | 150.200.000 | 4.000.000 |
 | 07/06/2026 | 146.200.000 | 150.200.000 | 4.000.000 |
 | 08/06/2026 | 138.800.000 | 143.800.000 | 5.000.000 |
@@ -66,14 +65,15 @@ graph LR
 | 12/06/2026 | 142.400.000 | 145.400.000 | 3.000.000 |
 | 13/06/2026 | 144.000.000 | 147.000.000 | 3.000.000 |
 | 14/06/2026 | 144.000.000 | 147.000.000 | 3.000.000 |
+| 15/06/2026 | 148.000.000 | 150.500.000 | 2.500.000 |
 
 
 ## 📊 Day-Over-Day (DoD) Volatility
 
 | Indicator | Delta (VND) |
 |---|---|
-| Ask Price | ➡️ 0 (0.00%) |
-| Bid Price | ➡️ 0 (0.00%) |
+| Ask Price | 📈 +4.000.000 (+2.78%) |
+| Bid Price | 📈 +3.500.000 (+2.38%) |
 
 ## 🚀 Data Engineering Roadmap
 
@@ -85,6 +85,6 @@ graph LR
 
 ---
 
-_Pipeline triggered at **2026-06-14 11:49 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 34 historical snapshots (2026-06-04 → 2026-06-14)._  
+_Pipeline triggered at **2026-06-15 12:05 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 35 historical snapshots (2026-06-04 → 2026-06-15)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._
