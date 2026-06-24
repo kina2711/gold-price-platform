@@ -2,9 +2,9 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=44&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=45&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-24 10:32:04 (ICT) 
+> **Latest Pipeline Run:** 2026-06-24 11:07:45 (ICT) 
 > **Key Metric (SJC):** Buy **144.000.000** VND — Sell **147.000.000** VND
 
 ## 🏗 System Architecture (ELT)
@@ -85,6 +85,6 @@ graph LR
 
 ---
 
-_Pipeline triggered at **2026-06-24 10:32 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 44 historical snapshots (2026-06-04 → 2026-06-24)._  
+_Pipeline triggered at **2026-06-24 11:07 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 45 historical snapshots (2026-06-04 → 2026-06-24)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._
