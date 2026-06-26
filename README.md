@@ -2,9 +2,9 @@
 
 An enterprise-grade Data Engineering & Analytics Engineering pipeline built to automatically ingest, transform, and alert on Vietnam's domestic gold prices using the Medallion Architecture.
 
-![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=46&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
+![daily-update](https://github.com/kina2711/gold-price-platform/actions/workflows/daily-update.yml/badge.svg) ![snapshots](https://img.shields.io/static/v1?label=snapshots&message=47&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=yellow) ![architecture](https://img.shields.io/static/v1?label=architecture&message=Medallion+%28ELT%29&color=purple)
 
-> **Latest Pipeline Run:** 2026-06-25 11:08:03 (ICT) 
+> **Latest Pipeline Run:** 2026-06-26 11:15:07 (ICT) 
 > **Key Metric (SJC):** Buy **143.200.000** VND — Sell **146.200.000** VND
 
 ## 🏗 System Architecture (ELT)
@@ -28,7 +28,7 @@ graph LR
 - **Silver (`data/silver/`)**: Cleaned, deduplicated, and normalized historical tabular data.
 - **Gold (In-Memory/UI)**: Business-level aggregations (trends, spread calculations, day-over-day changes).
 
-## 🎯 Gold Layer: Executive Metrics (2026-06-25)
+## 🎯 Gold Layer: Executive Metrics (2026-06-26)
 
 | Metric | Value (VND/lượng) |
 |---|---|
@@ -40,23 +40,22 @@ graph LR
 
 | Brand | Ask (VND) | Bid (VND) | Spread |
 |---|---:|---:|---:|
-| BTMC SJC | 142.000.000 | 146.200.000 | 4.200.000 |
-| BTMH | 141.500.000 | 146.000.000 | 4.500.000 |
+| BTMC SJC | 142.700.000 | 146.200.000 | 3.500.000 |
+| BTMH | 142.600.000 | 146.600.000 | 4.000.000 |
 | DOJI HN | 143.000.000 | 146.000.000 | 3.000.000 |
 | DOJI SG | 143.000.000 | 146.000.000 | 3.000.000 |
-| PNJ Hà Nội | 143.000.000 | 146.000.000 | 3.000.000 |
-| PNJ TP.HCM | 143.000.000 | 146.000.000 | 3.000.000 |
-| Phú Qúy SJC | 142.500.000 | 146.000.000 | 3.500.000 |
+| PNJ Hà Nội | 143.700.000 | 146.700.000 | 3.000.000 |
+| PNJ TP.HCM | 143.700.000 | 146.700.000 | 3.000.000 |
+| Phú Qúy SJC | 143.500.000 | 146.800.000 | 3.300.000 |
 | SJC | 143.200.000 | 146.200.000 | 3.000.000 |
 
 
 ## 📅 Historical Trend (10 Days)
 
-**7-Day Sparkline:** Ask `▇█▆ ▂▂▂▂  ` · Bid `▇█▇ ▂▂▃▃▂ `
+**7-Day Sparkline:** Ask `█▆ ▂▂▂▂   ` · Bid `█▇ ▂▂▃▃▂  `
 
 | Date | Ask | Bid | Spread |
 |---|---:|---:|---:|
-| 16/06/2026 | 149.500.000 | 151.500.000 | 2.000.000 |
 | 17/06/2026 | 149.800.000 | 151.800.000 | 2.000.000 |
 | 18/06/2026 | 148.800.000 | 151.300.000 | 2.500.000 |
 | 19/06/2026 | 143.700.000 | 146.700.000 | 3.000.000 |
@@ -66,14 +65,15 @@ graph LR
 | 23/06/2026 | 145.000.000 | 148.000.000 | 3.000.000 |
 | 24/06/2026 | 144.000.000 | 147.000.000 | 3.000.000 |
 | 25/06/2026 | 143.200.000 | 146.200.000 | 3.000.000 |
+| 26/06/2026 | 143.200.000 | 146.200.000 | 3.000.000 |
 
 
 ## 📊 Day-Over-Day (DoD) Volatility
 
 | Indicator | Delta (VND) |
 |---|---|
-| Ask Price | 📉 -800.000 (-0.56%) |
-| Bid Price | 📉 -800.000 (-0.54%) |
+| Ask Price | ➡️ 0 (0.00%) |
+| Bid Price | ➡️ 0 (0.00%) |
 
 ## 🚀 Data Engineering Roadmap
 
@@ -85,6 +85,6 @@ graph LR
 
 ---
 
-_Pipeline triggered at **2026-06-25 11:08 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
-_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 46 historical snapshots (2026-06-04 → 2026-06-25)._  
+_Pipeline triggered at **2026-06-26 11:15 +07** via [GitHub Actions](.github/workflows/daily-update.yml)._  
+_Data Lineage: [`data/silver/prices.json`](data/silver/prices.json) · 47 historical snapshots (2026-06-04 → 2026-06-26)._  
 _Setup & Configurations: [`docs/USAGE.md`](docs/USAGE.md). License: [MIT](LICENSE)._
